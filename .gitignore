@@ -1,0 +1,5 @@
+sensor/config.lua
+functions/.env
+functions/node_modules
+.firebase
+.firebaserc
