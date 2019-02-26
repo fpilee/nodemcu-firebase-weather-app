@@ -17,7 +17,7 @@ sntp.sync(nil, nil, function(err, info) print(err) end, 1)
 print( rtctime.get() )
 
 mytimer = tmr.create()
---creates a setInterval similar function
+-- runs function every 30 seconds, however device enter in sleep mode for 10 minutes after saving readings
 mytimer:register(10000, tmr.ALARM_AUTO, function()
     print( rtctime.get() )
     local body = getReadings()
