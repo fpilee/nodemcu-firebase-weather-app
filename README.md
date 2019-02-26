@@ -7,13 +7,5 @@ it enter in sleep mode to save batery.
 The cloud function stores in Firebase Realtime database and then is displayed on main page of project.
 
 
-# Organization
-
-
-
-Sensor code is lua and is in sensor/ folder.
-Nodemcu requires a wire between A0 and RST to wake up after sleep mode.
-![nodemcu](nodemcu.jpg)
-Cloud function is in function/ folder.
-HTML code in public/
+# Preview
 ![page](page.png)
