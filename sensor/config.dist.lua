@@ -1,5 +1,5 @@
 --[[
-config.lua | Tiest van Gool
+config.lua
 
 Global variables definitions for usage across various lua scripts
 --]]

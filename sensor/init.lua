@@ -1,5 +1,5 @@
 --[[
-init.lua | Tiest van Gool
+init.lua
 Script connects to internet through NodeMCU wifi module.
 Once connection is established dht module and temperature and humidity is retrieved.
 --]]
@@ -17,7 +17,7 @@ sntp.sync(nil, nil, function(err, info) print(err) end, 1)
 print( rtctime.get() )
 
 mytimer = tmr.create()
-
+--creates a setInterval similar function
 mytimer:register(10000, tmr.ALARM_AUTO, function()
     print( rtctime.get() )
     local body = getReadings()
@@ -30,7 +30,7 @@ mytimer:register(10000, tmr.ALARM_AUTO, function()
                     print("HTTP request failed")
                 else
                     print(code, data)
-                    rtctime.dsleep(60000000*10, 1)
+                    rtctime.dsleep(60000000*10, 1)  -- 10 minutes
                 end
             end)
     else
